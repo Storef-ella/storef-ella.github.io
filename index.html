@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Storefella: tools &amp; templates for event producers</title>
+<meta name="description" content="Free tools and ready-made templates for event producers: run of show builder, event budget, vendor and guest RSVP tracking in Excel and Google Sheets.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Storefella: tools & templates for event producers">
+<meta property="og:description" content="Free run of show builder + the Event Production Kit for Excel and Google Sheets.">
+<meta property="og:image" content="https://storefella.com/og.png">
+<meta property="og:url" content="https://storefella.com/">
+<style>
+:root{--bg:#f8fafc;--card:#fff;--ink:#0f172a;--body:#334155;--mute:#64748b;--line:#e2e8f0;--accent:#0f766e;--accent-lt:#ccfbf1;--hero:linear-gradient(160deg,#f0fdfa 0%,#ffffff 60%,#f8fafc 100%)}
+@media (prefers-color-scheme:dark){:root{--bg:#0b1220;--card:#111827;--ink:#f1f5f9;--body:#cbd5e1;--mute:#94a3b8;--line:#1f2937;--accent:#2dd4bf;--accent-lt:#134e4a;--hero:linear-gradient(160deg,#0f2a2a 0%,#0b1220 60%)}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--body);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+a{color:var(--accent)}
+.wrap{max-width:1080px;margin:auto;padding:0 20px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;color:var(--ink);text-decoration:none;letter-spacing:-.3px}
+.logo svg{width:30px;height:30px}
+nav .links a{margin-left:22px;text-decoration:none;color:var(--body);font-weight:500}
+header.hero{background:var(--hero);border-bottom:1px solid var(--line)}
+.hero-in{padding:56px 0 72px}
+.kicker{font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--accent)}
+h1{font-size:clamp(34px,5.5vw,56px);line-height:1.05;letter-spacing:-1.5px;color:var(--ink);margin:14px 0 18px;max-width:780px}
+.lead{font-size:19px;max-width:640px;color:var(--body)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-block;padding:13px 22px;border-radius:10px;font-weight:700;text-decoration:none}
+.btn.primary{background:var(--accent);color:#fff}
+@media (prefers-color-scheme:dark){.btn.primary{color:#042f2e}}
+.btn.ghost{border:2px solid var(--line);color:var(--ink)}
+section{padding:64px 0}
+h2{font-size:30px;letter-spacing:-.6px;color:var(--ink);margin:0 0 8px}
+.sub{color:var(--mute);margin:0 0 32px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.card img{width:100%;display:block;border-bottom:1px solid var(--line);aspect-ratio:4/3;object-fit:cover}
+.card .body{padding:22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card h3{margin:0;font-size:22px;color:var(--ink)}
+.tag{align-self:flex-start;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:var(--accent-lt);color:var(--accent)}
+.card ul{margin:0;padding-left:18px}
+.card .btn{margin-top:auto;align-self:flex-start}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.why div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.why b{display:block;color:var(--ink);margin-bottom:4px}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--mute);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+@media (max-width:560px){nav .links a{margin-left:14px}nav .links a.hide-sm{display:none}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <nav>
+      <a class="logo" href="/"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#0f766e"/><path d="M9 11h14M9 16h10M9 21h12" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg>Storefella</a>
+      <div class="links"><a href="#products">Products</a><a class="hide-sm" href="/run-of-show/">Free tool</a><a href="mailto:info@storefella.com">Contact</a></div>
+    </nav>
+    <div class="hero-in">
+      <div class="kicker">For event producers</div>
+      <h1>Run smoother events with less spreadsheet wrangling.</h1>
+      <p class="lead">Practical tools and ready-made templates for conferences, galas, launches and corporate events: run of show, budgets, vendors and guest lists.</p>
+      <div class="cta">
+        <a class="btn primary" href="/run-of-show/">Try the free Run of Show Builder</a>
+        <a class="btn ghost" href="https://shop.storefella.com/l/event-production-kit">Get the Event Production Kit</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="products">
+    <div class="wrap">
+      <h2>Products</h2>
+      <p class="sub">Made for people who run shows.</p>
+      <div class="grid">
+        <article class="card">
+          <img src="img/run-of-show.png" alt="Run of Show Builder with auto-calculated start and end times">
+          <div class="body">
+            <span class="tag">Free</span>
+            <h3>Run of Show Builder</h3>
+            <p>Type durations and every start time rolls forward. When a segment runs late, change one number and the schedule updates.</p>
+            <ul><li>Owner, location and AV / lighting cues</li><li>Print to PDF, export CSV, share a link</li><li>No signup. Saves in your browser</li></ul>
+            <a class="btn primary" href="/run-of-show/">Open the builder</a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="img/kit.png" alt="Event Production Kit dashboard">
+          <div class="body">
+            <span class="tag">$19 · Excel + Google Sheets</span>
+            <h3>Event Production Kit</h3>
+            <p>One linked workbook for the whole event, with a live dashboard on top.</p>
+            <ul><li>Budget vs actual, paid vs owed, payment alerts</li><li>Auto-rolling run of show with cues</li><li>Vendor tracker, 300-guest RSVP list, task countdown</li></ul>
+            <a class="btn primary" href="https://shop.storefella.com/l/event-production-kit">See what's inside</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap why">
+      <div><b>No double entry</b>Enter something once and every tab that needs it updates.</div>
+      <div><b>Works anywhere</b>Excel or free Google Sheets. Any currency.</div>
+      <div><b>Show-day ready</b>Prints cleanly for crew binders and the tech desk.</div>
+      <div><b>Questions?</b>Email <a href="mailto:info@storefella.com">info@storefella.com</a>. A real person replies.</div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="y"></span> Storefella</span>
+    <span><a href="mailto:info@storefella.com">info@storefella.com</a></span>
+  </div>
+</footer>
+<script>document.getElementById("y").textContent=new Date().getFullYear();</script>
+</body>
+</html>
