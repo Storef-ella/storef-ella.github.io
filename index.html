@@ -3,118 +3,204 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Storefella: tools &amp; templates for event producers</title>
-<meta name="description" content="Free tools and ready-made templates for event producers: run of show builder, event budget, vendor and guest RSVP tracking in Excel and Google Sheets.">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<meta property="og:title" content="Storefella: tools & templates for event producers">
-<meta property="og:description" content="Free run of show builder + the Event Production Kit for Excel and Google Sheets.">
+<title>Storefella: ready-made tools, templates and free online tools</title>
+<meta name="description" content="Storefella is a growing shop of practical templates, workbooks and free online tools. Instant download, works with the apps you already use.">
+<link rel="icon" href="/brand/icon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/brand/icon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="/brand/apple-touch-icon.png">
+<meta name="theme-color" content="#5b30e0">
+<meta property="og:site_name" content="Storefella">
+<meta property="og:title" content="Storefella: ready-made tools that save you hours">
+<meta property="og:description" content="Templates, workbooks and free online tools. Instant download, works with the apps you already use.">
 <meta property="og:image" content="https://storefella.com/og.png">
 <meta property="og:url" content="https://storefella.com/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f8fafc;--card:#fff;--ink:#0f172a;--body:#334155;--mute:#64748b;--line:#e2e8f0;--accent:#0f766e;--accent-lt:#ccfbf1;--hero:linear-gradient(160deg,#f0fdfa 0%,#ffffff 60%,#f8fafc 100%)}
-@media (prefers-color-scheme:dark){:root{--bg:#0b1220;--card:#111827;--ink:#f1f5f9;--body:#cbd5e1;--mute:#94a3b8;--line:#1f2937;--accent:#2dd4bf;--accent-lt:#134e4a;--hero:linear-gradient(160deg,#0f2a2a 0%,#0b1220 60%)}}
+:root{--bg:#ffffff;--soft:#f6f4fe;--card:#fff;--ink:#291933;--body:#4a4458;--mute:#7a7389;--line:#ebe7f5;--brand:#5b30e0;--brand-ink:#fff;--brand-lt:#ece6ff;--brand-tx:#4a22c9;--hero:radial-gradient(1200px 500px at 85% -10%,#e9e2ff 0%,rgba(233,226,255,0) 60%),#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#140f1f;--soft:#1b1529;--card:#1d1730;--ink:#f4f1fb;--body:#cdc6dc;--mute:#9c94b0;--line:#2c2442;--brand:#7c5cff;--brand-ink:#fff;--brand-lt:#2a2050;--brand-tx:#b8a6ff;--hero:radial-gradient(1200px 500px at 85% -10%,#2b1f5c 0%,rgba(43,31,92,0) 60%),#140f1f}}
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--body);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
-a{color:var(--accent)}
-.wrap{max-width:1080px;margin:auto;padding:0 20px}
-nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
-.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;color:var(--ink);text-decoration:none;letter-spacing:-.3px}
-.logo svg{width:30px;height:30px}
-nav .links a{margin-left:22px;text-decoration:none;color:var(--body);font-weight:500}
+a{color:var(--brand-tx)}
+h1,h2,h3,.btn,.chip,.tag{font-family:Nunito,system-ui,sans-serif}
+.wrap{max-width:1120px;margin:auto;padding:0 20px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:16px}
+.logo img{height:34px;width:auto;display:block}
+.logo .dk{display:none}
+@media (prefers-color-scheme:dark){.logo .lt{display:none}.logo .dk{display:block}}
+nav .links{display:flex;gap:22px}
+nav .links a{text-decoration:none;color:var(--body);font-weight:600}
+nav .links a:hover{color:var(--brand-tx)}
 header.hero{background:var(--hero);border-bottom:1px solid var(--line)}
-.hero-in{padding:56px 0 72px}
-.kicker{font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--accent)}
-h1{font-size:clamp(34px,5.5vw,56px);line-height:1.05;letter-spacing:-1.5px;color:var(--ink);margin:14px 0 18px;max-width:780px}
-.lead{font-size:19px;max-width:640px;color:var(--body)}
-.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
-.btn{display:inline-block;padding:13px 22px;border-radius:10px;font-weight:700;text-decoration:none}
-.btn.primary{background:var(--accent);color:#fff}
-@media (prefers-color-scheme:dark){.btn.primary{color:#042f2e}}
-.btn.ghost{border:2px solid var(--line);color:var(--ink)}
-section{padding:64px 0}
-h2{font-size:30px;letter-spacing:-.6px;color:var(--ink);margin:0 0 8px}
-.sub{color:var(--mute);margin:0 0 32px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.hero-in{padding:64px 0 84px;max-width:760px}
+.kicker{display:inline-block;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--brand-tx);background:var(--brand-lt);padding:6px 12px;border-radius:999px}
+h1{font-size:clamp(36px,6vw,62px);line-height:1.04;letter-spacing:-1.5px;color:var(--ink);margin:18px 0 18px;font-weight:900}
+h1 span{color:var(--brand)}
+.lead{font-size:19px;max-width:620px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-block;padding:13px 22px;border-radius:12px;font-weight:800;font-size:16px;text-decoration:none;border:0;cursor:pointer}
+.btn.primary{background:var(--brand);color:var(--brand-ink)}
+.btn.primary:hover{filter:brightness(1.08)}
+.btn.ghost{border:2px solid var(--line);color:var(--ink);background:transparent}
+.btn.sm{padding:10px 16px;font-size:15px}
+section{padding:72px 0}
+.head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:28px}
+h2{font-size:clamp(28px,4vw,36px);line-height:1.15;letter-spacing:-.6px;color:var(--ink);margin:0;font-weight:900}
+.sub{color:var(--mute);margin:6px 0 0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:2px solid var(--line);background:var(--card);color:var(--body);padding:7px 14px;border-radius:999px;font-weight:800;font-size:14px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(41,25,51,.10)}
 .card img{width:100%;display:block;border-bottom:1px solid var(--line);aspect-ratio:4/3;object-fit:cover}
 .card .body{padding:22px;display:flex;flex-direction:column;gap:10px;flex:1}
-.card h3{margin:0;font-size:22px;color:var(--ink)}
-.tag{align-self:flex-start;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:var(--accent-lt);color:var(--accent)}
+.card h3{margin:0;font-size:22px;color:var(--ink);font-weight:900}
+.card p{margin:0}
+.meta{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:12px;font-weight:800;letter-spacing:.5px;padding:4px 10px;border-radius:999px;background:var(--brand-lt);color:var(--brand-tx)}
+.tag.free{background:#dcfce7;color:#166534}
+@media (prefers-color-scheme:dark){.tag.free{background:#14532d;color:#bbf7d0}}
+.tag.cat{background:var(--soft);color:var(--mute)}
 .card ul{margin:0;padding-left:18px}
-.card .btn{margin-top:auto;align-self:flex-start}
-.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
-.why div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
-.why b{display:block;color:var(--ink);margin-bottom:4px}
+.card .foot{margin-top:auto;padding-top:8px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.price{font-family:Nunito,system-ui,sans-serif;font-weight:900;font-size:22px;color:var(--ink)}
+.card.soon{border-style:dashed;background:var(--soft);justify-content:center}
+.card.soon .art{aspect-ratio:4/3;display:grid;place-items:center;border-bottom:1px dashed var(--line)}
+.card.soon .art img{width:38%;height:auto;aspect-ratio:auto;border:0;opacity:.9}
+.why{background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.why .grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.why .item{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+.why .item b{display:block;color:var(--ink);font-family:Nunito,system-ui,sans-serif;font-size:18px;font-weight:900;margin-bottom:4px}
+.why .num{width:38px;height:38px;border-radius:12px;background:var(--brand);color:#fff;display:grid;place-items:center;font-weight:900;margin-bottom:12px;font-family:Nunito,system-ui,sans-serif}
+.ask{text-align:center;max-width:640px;margin:auto}
+.ask img{width:72px;height:auto;margin-bottom:12px}
+.ask .cta{justify-content:center}
 footer{border-top:1px solid var(--line);padding:28px 0;color:var(--mute);font-size:14px}
-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
-@media (max-width:560px){nav .links a{margin-left:14px}nav .links a.hide-sm{display:none}}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px}
+footer .brand{display:flex;align-items:center;gap:10px}
+footer .brand img{width:24px;height:auto}
+footer a{color:var(--mute)}
+[hidden]{display:none!important}
+@media (max-width:600px){nav .links{gap:14px}nav .links a.hide-sm{display:none}.logo img{height:28px}.hero-in{padding:40px 0 60px}section{padding:56px 0}}
 </style>
 </head>
 <body>
 <header class="hero">
   <div class="wrap">
     <nav>
-      <a class="logo" href="/"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#0f766e"/><path d="M9 11h14M9 16h10M9 21h12" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg>Storefella</a>
-      <div class="links"><a href="#products">Products</a><a class="hide-sm" href="/run-of-show/">Free tool</a><a href="mailto:info@storefella.com">Contact</a></div>
+      <a class="logo" href="/" aria-label="Storefella home"><img class="lt" src="/brand/logo.png" alt="Storefella"><img class="dk" src="/brand/logo-dark.png" alt="Storefella"></a>
+      <div class="links"><a href="#shop">Shop</a><a class="hide-sm" href="#free">Free tools</a><a href="mailto:info@storefella.com">Contact</a></div>
     </nav>
     <div class="hero-in">
-      <div class="kicker">For event producers</div>
-      <h1>Run smoother events with less spreadsheet wrangling.</h1>
-      <p class="lead">Practical tools and ready-made templates for conferences, galas, launches and corporate events: run of show, budgets, vendors and guest lists.</p>
+      <span class="kicker">Templates · Workbooks · Free tools</span>
+      <h1>Ready-made tools that <span>save you hours.</span></h1>
+      <p class="lead">Storefella is a growing shop of practical templates, workbooks and free online tools. Download instantly and use them with the apps you already have.</p>
       <div class="cta">
-        <a class="btn primary" href="/run-of-show/">Try the free Run of Show Builder</a>
-        <a class="btn ghost" href="https://shop.storefella.com/l/event-production-kit">Get the Event Production Kit</a>
+        <a class="btn primary" href="#shop">Browse the shop</a>
+        <a class="btn ghost" href="#free">Try a free tool</a>
       </div>
     </div>
   </div>
 </header>
 
 <main>
-  <section id="products">
+  <section id="shop">
     <div class="wrap">
-      <h2>Products</h2>
-      <p class="sub">Made for people who run shows.</p>
-      <div class="grid">
-        <article class="card">
-          <img src="img/run-of-show.png" alt="Run of Show Builder with auto-calculated start and end times">
+      <div class="head">
+        <div><h2>Shop</h2><p class="sub">New products are added regularly.</p></div>
+        <div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
+      </div>
+
+      <!-- PRODUCTS: add one <article class="card" data-cat="..."> per product. Chips are built from data-cat automatically. -->
+      <div class="grid" id="products">
+        <article class="card" data-cat="Events" data-type="paid">
+          <img src="img/kit.png" alt="Event Production Kit dashboard" loading="lazy">
           <div class="body">
-            <span class="tag">Free</span>
-            <h3>Run of Show Builder</h3>
-            <p>Type durations and every start time rolls forward. When a segment runs late, change one number and the schedule updates.</p>
-            <ul><li>Owner, location and AV / lighting cues</li><li>Print to PDF, export CSV, share a link</li><li>No signup. Saves in your browser</li></ul>
-            <a class="btn primary" href="/run-of-show/">Open the builder</a>
+            <div class="meta"><span class="tag cat">Events</span><span class="tag">Excel + Google Sheets</span></div>
+            <h3>Event Production Kit</h3>
+            <p>One linked workbook for the whole event: budget, run of show, vendors, guests and tasks, with a live dashboard on top.</p>
+            <ul><li>Budget vs actual, overdue payment alerts</li><li>Auto-rolling run of show</li><li>Example + blank version, PDF manual</li></ul>
+            <div class="foot"><span class="price">$19</span><a class="btn primary sm" href="https://shop.storefella.com/l/event-production-kit">View product</a></div>
           </div>
         </article>
-        <article class="card">
-          <img src="img/kit.png" alt="Event Production Kit dashboard">
+
+        <article class="card" data-cat="Events" data-type="free" id="free">
+          <img src="img/run-of-show.png" alt="Run of Show Builder with auto-calculated times" loading="lazy">
           <div class="body">
-            <span class="tag">$19 · Excel + Google Sheets</span>
-            <h3>Event Production Kit</h3>
-            <p>One linked workbook for the whole event, with a live dashboard on top.</p>
-            <ul><li>Budget vs actual, paid vs owed, payment alerts</li><li>Auto-rolling run of show with cues</li><li>Vendor tracker, 300-guest RSVP list, task countdown</li></ul>
-            <a class="btn primary" href="https://shop.storefella.com/l/event-production-kit">See what's inside</a>
+            <div class="meta"><span class="tag cat">Events</span><span class="tag free">Free online tool</span></div>
+            <h3>Run of Show Builder</h3>
+            <p>Type durations and every start time rolls forward. Running late? Change one number and the whole schedule updates.</p>
+            <ul><li>Save several shows, share a link</li><li>Print to PDF or export CSV</li><li>No signup, works in your browser</li></ul>
+            <div class="foot"><span class="price">Free</span><a class="btn primary sm" href="/run-of-show/">Open the tool</a></div>
+          </div>
+        </article>
+
+        <article class="card soon" data-cat="all-only">
+          <div class="art"><img src="/brand/icon-192.png" alt=""></div>
+          <div class="body">
+            <h3>More on the way</h3>
+            <p>New templates and tools are in the works. Tell us what would save you the most time, and we may build it next.</p>
+            <div class="foot"><a class="btn ghost sm" href="mailto:info@storefella.com?subject=Product%20idea%20for%20Storefella">Suggest a product</a></div>
           </div>
         </article>
       </div>
     </div>
   </section>
 
-  <section style="padding-top:0">
-    <div class="wrap why">
-      <div><b>No double entry</b>Enter something once and every tab that needs it updates.</div>
-      <div><b>Works anywhere</b>Excel or free Google Sheets. Any currency.</div>
-      <div><b>Show-day ready</b>Prints cleanly for crew binders and the tech desk.</div>
-      <div><b>Questions?</b>Email <a href="mailto:info@storefella.com">info@storefella.com</a>. A real person replies.</div>
+  <section class="why">
+    <div class="wrap">
+      <div class="head"><div><h2>Why Storefella</h2><p class="sub">Small, useful products that do one job well.</p></div></div>
+      <div class="grid">
+        <div class="item"><div class="num">1</div><b>Instant download</b>Pay once and download straight away. Updates are free.</div>
+        <div class="item"><div class="num">2</div><b>Uses what you have</b>Excel, Google Sheets or your browser. Nothing new to install or subscribe to.</div>
+        <div class="item"><div class="num">3</div><b>Ready to use</b>Every product comes with an example and clear instructions.</div>
+        <div class="item"><div class="num">4</div><b>Real support</b>Email <a href="mailto:info@storefella.com">info@storefella.com</a> and a real person replies.</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap ask">
+      <img src="/brand/icon-192.png" alt="">
+      <h2>Have something you'd like us to build?</h2>
+      <p class="sub" style="margin-bottom:0">We pick new products from what customers ask for.</p>
+      <div class="cta"><a class="btn primary" href="mailto:info@storefella.com?subject=Product%20idea%20for%20Storefella">Send us an idea</a></div>
     </div>
   </section>
 </main>
 
 <footer>
   <div class="wrap">
-    <span>© <span id="y"></span> Storefella</span>
-    <span><a href="mailto:info@storefella.com">info@storefella.com</a></span>
+    <span class="brand"><img src="/brand/icon-48.png" alt="">© <span id="y"></span> Storefella</span>
+    <span><a href="#shop">Shop</a> · <a href="/run-of-show/">Run of Show Builder</a> · <a href="mailto:info@storefella.com">info@storefella.com</a></span>
   </div>
 </footer>
-<script>document.getElementById("y").textContent=new Date().getFullYear();</script>
+<script>
+document.getElementById("y").textContent = new Date().getFullYear();
+(function () {
+  var cards = [].slice.call(document.querySelectorAll("#products .card"));
+  var cats = [];
+  cards.forEach(function (c) { var k = c.dataset.cat; if (k && k !== "all-only" && cats.indexOf(k) < 0) cats.push(k); });
+  var opts = ["All"].concat(cats, ["Free"]);
+  var box = document.getElementById("chips");
+  if (cats.length < 2) opts = ["All", "Free"];
+  opts.forEach(function (name, i) {
+    var b = document.createElement("button");
+    b.className = "chip"; b.type = "button"; b.textContent = name;
+    b.setAttribute("aria-pressed", i === 0 ? "true" : "false");
+    b.onclick = function () {
+      [].forEach.call(box.children, function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      cards.forEach(function (c) {
+        c.hidden = !(name === "All" || (name === "Free" ? c.dataset.type === "free" : c.dataset.cat === name));
+      });
+    };
+    box.appendChild(b);
+  });
+})();
+</script>
 </body>
 </html>
